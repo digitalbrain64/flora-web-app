@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/code-files/dashboard.js"></script>
+
+  </head>
+  <body>
+    <ul id="tabs" class="nav nav-tabs">
+      <li><button id="navbar-toggle" class="btn btn-light">&#9776;</button></li>
+      <li class="active"><a data-toggle="tab" href="#map">Map</a></li>
+      <li><a data-toggle="tab" href="#home">Home</a></li>
+      <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+    </ul> 
+    
+      {{!-- side nav bar --}}
+      <div id="sidebar">
+      <ul class="nav flex-column">
+        
+    {{!-- /side nav bar --}}
+      </ul>
+      </div>
+    <div class="tab-content">
+      <div style="height:600px;" id="map" class="tab-pane fade in active">
+        
+      </div>
+      <div id="home" class="tab-pane fade">
+        <h3>HOME</h3>
+        <p>Some content.</p>
+      </div>
+      <div id="menu2" class="tab-pane fade">
+        <h3>Menu 2</h3>
+        <p>Some content in menu 2.</p>
+      </div>
+    </div>
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOGS-yYwAKpMVTGPWkMPyzWfUW-2n6fPw&callback=initMap"></script>
+
+  </body>
+</html>

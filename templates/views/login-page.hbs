@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    {{>header}}
+    <div id="login_div" class="container">
+        <div class="container-fluid">
+            <h2>Log-In to dashboard</h2>
+        </div>
+        <div class="cotainer">
+            <div>
+                <div class="form-group">
+                    <label for="email">Username or Email address:</label>
+                    <input type="email" class="form-control" id="user">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd">
+                </div>
+                <div id="error-msg-pass-change" style="display:none;">
+                    <p></p>
+                </div>
+                <div>
+                    <div class="checkbox">
+                        <div style="float: left;">
+                            <a href="pass-change-step-1">forgot password?</a>
+                        </div>
+                        
+                        <div style="float: right;">
+                            <button id="login_submit" class="btn btn-success">Login
+                                <img id="loading_icon" style="margin-left:5px; display:none;" width="15px" src="/images/loading.gif" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+    <script src="/scripts/app-logic.js"></script>
+</body>
+</html>

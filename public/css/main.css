@@ -1,0 +1,278 @@
+
+/* #main-section .container{
+    width: 100%;
+    background-size: cover;
+} */
+
+/* .navbar{
+  background-color: orange;
+  border-radius: 0px;
+} */
+
+/*Set height of body and the document to 100%*/
+
+/* body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: Arial;
+} */
+
+
+
+/* .tab-content{
+  float: right;
+  width: 85%;
+  left: 0;
+} */
+
+/* #features{
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+} */
+
+/* #login_form{
+  margin: 0 auto;
+} */
+
+/* #features div{
+    height: auto;
+    border-radius: 3px;
+    padding: 20px;
+    border: 2px solid rgb(248, 194, 76);
+    background-color: rgba(253, 253, 253, 1);
+} */
+
+/* #features div img{
+    margin-bottom: 15px;
+    width: 60px;
+} */
+
+/* #features div p{
+    font-size: 15px;
+} */
+
+/* #center-map-cont{
+    text-align: center;
+    background-image:linear-gradient(to top, rgba(255, 255, 255, 0.5), rgb(255, 255, 255)), url('../images/maps.jpg');
+    height: 620px;
+
+} */
+
+/* #bottom-cont-1{
+    text-align: center;
+    background-image:linear-gradient(to top, rgba(255, 255, 255, 0.5), rgb(255, 255, 255)), url('../images/action-adult-care-339620\ \(1\).jpg');
+    height: 620px;
+} */
+
+/* #bottom-cont-2{
+    text-align: center;
+    background-image:linear-gradient(to top, rgba(255, 255, 255, 0.5), rgb(255, 255, 255)), url('../images/blur-chart-check-up-415779.jpg');
+    height: 620px;
+} */
+
+/* #bottom-cont-3{
+    text-align: center;
+    background:rgb(240, 240, 240);
+    height: 680px;
+} */
+
+/* #sidebar li a div{
+  display: flex;
+  justify-content: space-around;
+  
+} */
+
+/* sidebar css style */
+/* .nav-item{
+  border: 1px solid #c9c9c9;
+  border-radius: 5px;
+} */
+
+/* #tabs li button{
+  margin:5px;
+  transition: 0.4s;
+  outline:none !important;
+  border-radius: 2px;
+} */
+/* 
+#tabs li button:active{
+  background-color: rgb(238,238,238) !important;
+  box-shadow: none !important;
+} */
+
+/* #tabs li button:hover{
+  background-color: rgb(238,238,238) !important;
+  transition: 0.4s;
+  box-shadow: none !important;
+} */
+
+/* .nav-item a{
+  border-radius: 2px;
+  margin: 2px;
+} */
+
+/* .info-dropdown{
+  height: 200px;
+} */
+
+/* #sidebar{
+  float: left;
+  padding: 5px;
+  border-right: 1px solid #c9c9c9;
+  height: 100%;
+  width: 15%;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* from scratch! */
+
+
+/* header css styling */
+
+#header{
+  border: 1px solid blue;
+  height: 65px;
+  margin-bottom: 10px;
+
+}
+
+#header #header-left-div{
+  border: 1px solid green;
+  float: left;
+  margin: 10px;
+
+}
+
+#header #header-right-div{
+  float: right;
+  margin: 10px;
+}
+
+#header #header-right-div a{
+  font-size: 17px;
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/* footer css styling */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* login page css styling*/
+
+#login_div{
+  margin: auto;
+  margin-top: 5%;
+  width: 40%;
+  border: 3px solid green;
+  border-radius: 25px;
+  padding: 15px;
+}
+#login_div div {
+  margin-bottom: 25px;
+}
+
+
+/* login and password change steps : forms, inputs, buttons*/
+#pass_change_text{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 1px;
+  border: 2px dashed lightblue;
+}
+
+#error-msg-pass-change p{
+  margin: 5px;
+  font-style: italic;
+  color: red;
+  font-size: 14px;
+}
+
+#number{
+  font-weight: bold;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#digit_table td input{
+  text-align: center;
+  margin: 5px;
+  padding: 5px!important;
+  line-height: 14px;
+}
+
+#digit_table{
+  margin: auto;
+}
+
+#pass_format_list{
+  width: 180px;
+  padding-bottom: 10px;
+  padding-top: 25px;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#pass_format_list ul{
+  padding-left: 10px;
+  list-style: none;
+}
+
+#pass_format_list ul li{
+  color: red;
+}
+
