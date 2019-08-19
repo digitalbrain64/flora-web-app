@@ -17,8 +17,7 @@ router.get('/pass-change-step-3', (req, res, get)=>{
 router.get('/login', (req,res,next)=>{
     res.render('login-page');
 });
-router.post('/dashboard', (req, res, next)=>{
-    console.log(req.body);
+router.get('/dashboard', (req, res, next)=>{
     res.render('dashboard');
 });
 
