@@ -1,12 +1,19 @@
-
 {{!-- header of every page in web app --}}
-
-<div id="header">
-  <div id="header-left-div">
-    {{!-- image - logo --}}
-    <p>logo</p>
+<header>
+  <nav id="header" class="big-header-nav navbar navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">WebSiteName</a>
+    </div>
+    <ul id="pages" class="nav navbar-nav">
+      <li class="active"><a href="/">Home</a></li>
+      <li><a href="/">Sign Up</a></li>
+      <li><a href="/">Activate</a></li>
+      <li><a href="/">Our Products</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li id="login"><a class="btn btn-primary" href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
   </div>
-  <div id="header-right-div">
-    <a class="glyphicon glyphicon-log-in btn btn-primary" href="login"> Login</a>
-  </div>
-</div>
+</nav>
+</header>

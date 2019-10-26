@@ -6,40 +6,74 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    
-
   </head>
   <body>
-    {{>header}}
-    <ul id="tabs" class="nav nav-tabs">
-      <li><button id="navbar-toggle" class="btn btn-light">&#9776;</button></li>
-      <li class="active"><a data-toggle="tab" href="#map">Map</a></li>
-      <li><a data-toggle="tab" href="#home">Home</a></li>
-      <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
-    </ul> 
-    
-      {{!-- side nav bar --}}
-      <div id="sidebar">
-      <ul class="nav flex-column">
-        
-    {{!-- /side nav bar --}}
-      </ul>
+    <header>
+        <nav id="dash-header" class="navbar navbar-default">
+          <button style="float: left;" id="navbar-toggle" class="btn btn-light"><img class="rotated" width="35px" src="images/icons/baseline_menu_black_36dp.png" alt=""></button>
+            <div class="container-fluid">
+                <div style="padding:0px; margin-top:5px; margin-right:5px;"  class="navbar-header">
+                  <a  href="/"><img style="padding: 2px;" width="90px" src="/images/global_sos_tracker_w1000.png" alt=""></a>
+                </div>
+                <div id="user_li" style="float: right;">
+                  <div style="margin: 4px;" class="dropdown">
+                    <button class="dropdown-toggle" type="button" data-toggle="dropdown"><img width="35px" src="/images/icons/baseline_account_circle_black_48dp.png" alt=""></button>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                      <li>
+                        <div class="user_info_dropdown">
+                        <div class="app_user_info_dropdown_content">
+                        <div>
+                          <div>
+                            <img width="60px" src="/images/icons/baseline_account_circle_black_48dp.png" alt="">
+                          </div>
+                        </div>
+                        <div class="app_user_basic_info">
+                            <h5 class="app_user_name">null</h5>
+                            <p class="app_user_email">null</p>
+                        </div>
+                      </div>
+                      </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div style="margin: 4px; margin-right:20px; float: right;" id="reload_btn">
+                    <button><img width="35px" src="/images/icons/baseline_refresh_black_36dp.png" alt=""></button>
+                </div>
+                <div id="scroll-me">
+                  <div class="scroller scroller-left">
+                    <button disabled='true'>
+                      <i class="glyphicon glyphicon-chevron-left"></i>
+                    </button>
+                  </div>
+                  <div class="scroller scroller-right">
+                    <button disabled='true'>
+                      <i class="glyphicon glyphicon-chevron-right"></i>
+                    </button>
+                  </div>
+                </div>
+                <div id="dash_tabs"  style="overflow-x: hidden; height:100%;" class="container-fluid">
+                <ul style="overflow-x:auto;" id="tabs" class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#map-tab"><img width="18px" src="images/icons/baseline_my_location_black_36dp.png"> Realtime Location</a></li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section style="height: 100vh;">
+       {{!-- side nav bar --}}
+       <div id="sidebar">
+         <ul>
+         </ul>
       </div>
-    <div class="tab-content">
-      <div style="height:600px;" id="map" class="tab-pane fade in active">
-        
-      </div>
-      <div id="home" class="tab-pane fade">
-        <h3>HOME</h3>
-        <p>Some content.</p>
-      </div>
-      <div id="menu2" class="tab-pane fade">
-        <h3>Menu 2</h3>
-        <p>Some content in menu 2.</p>
-      </div>
-    </div>
-    
+       <div class="tab-content">
+         <div id="map-tab" class="tab-pane fade active in">
+           <div id="map"></div>
+         </div>
+       </div>
+    </section>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOGS-yYwAKpMVTGPWkMPyzWfUW-2n6fPw&callback=initMap"></script>
     <script type="text/javascript" src="/code-files/dashboard.js"></script>
   </body>

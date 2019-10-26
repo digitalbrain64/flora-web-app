@@ -1,41 +1,208 @@
-body, html {
-    height: 100%;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  .bg-image {
-    /* The image used */
-    background-image: url("/images/car-connection-dashboard-1305305.jpg");
-  
-    /* Add the blur effect */
-    filter: blur(2px);
-    -webkit-filter: blur(2px);
-  
-    /* Full height */
-    height: 100%; 
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  /* Position text in the middle of the page/image */
-  .bg-text {
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-    color: white;
-    font-weight: bold;
-    border: 3px solid #f1f1f1;
-    position: absolute;
-    top: 20%;
-    left: 90%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 20%;
-    padding: 20px;
+body, html {height: 100%;}
+
+#center-map-cont{
     text-align: center;
-  }
+    background-image:linear-gradient(to top, rgba(255, 255, 255, 0.5), rgb(255, 255, 255)), url('../images/maps.jpg');
+    height: 620px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#bottom-cont-1{
+    text-align: center;
+    background-image:linear-gradient(to top, rgba(255, 255, 255, 0.5), rgb(255, 255, 255)), url('../images/action-adult-care-339620\ \(1\).jpg');
+    height: 620px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#bottom-cont-2{
+    text-align: center;
+    background-image:linear-gradient(to top, rgba(255, 255, 255, 0.5), rgb(255, 255, 255)), url('../images/blur-chart-check-up-415779.jpg');
+    height: 620px;
+    margin-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.poster-block {
+
+  margin: 40px;
+}
+
+#pass_change_text{
+  border-radius: 5px;
+  border: 2px dashed cornflowerblue;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+
+
+
+/* from scratch! */
+/* header css styling */
+.small-header-nav{
+  transition: 0.5s;
+  border-radius: 0px!important;
+  height: 25px!important;
+  min-height:30px !important;
+  background: #000000!important;
+}
+.small-header-nav .navbar-brand{
+  font-size: 11px;
+  transition: 0.5s;
+  padding-top: 2px!important;
+  padding-bottom: 0px!important;
+  margin-bottom: 0px!important;
+  margin-top: 0px!important;
+}
+.small-header-nav ul{
+  transition: 0.5s;
+  padding-top: 0px!important;
+  margin-top: 0px!important;
+  font-size: 11px;
+  height: 12px;
+}
+.small-header-nav #pages li a{
+  transition: 0.5s;
+  padding-top: 5px!important;
+  padding-bottom: 5px!important;
+  margin: 0px!important;
+  font-size: 11px;
+  color: white!important;
+}
+.small-header-nav #login a{
+  text-decoration: none;
+  margin: 3px;
+  transition: 0.5s;
+  padding-left: 10px!important;
+  padding-right: 10px!important;
+  padding-top: 2px!important;
+  padding-bottom: 2px!important;
+  font-size: 11px;
+  color: white;
+  border: 0px solid transparent;
+}
+.small-header-nav #login a:hover{
+  background-color: green;
+  border: 0px solid transparent;
+}
+
+.small-header-nav .navbar-brand img{
+  transition: 0.5s;
+  width: 55px;
+}
+
+.big-header-nav{
+  transition: 0.5s;
+  border-radius: 0px!important;
+  height: 50px!important;
+}
+
+.big-header-nav #login a{
+  margin: 11px;
+  transition: 0.5s;
+  padding-left: 10px!important;
+  padding-right: 10px!important;
+  padding-top: 5px!important;
+  padding-bottom: 5px!important;
+  color: white;
+  border: 0px solid transparent;
+}
+
+.big-header-nav #login a:hover{
+  background-color: green;
+  border: 0px solid transparent;
+}
+
+.big-header-nav #pages li a{
+  transition: 0.5s;
+  font-size: 14px;
+}
+
+.big-header-nav .navbar-brand{
+  transition: 0.5s;
+  padding-top: 0px!important;
+  padding-bottom: 10px!important;
+  margin-bottom: 5px!important;
+  margin-top: 4px!important;
+}
+
+.big-header-nav .navbar-brand img{
+  width: 100px;
+  transition: 0.5s;
+}
+
+#header{
+  background: #f0f0f0;
+  -webkit-box-shadow: -1px 5px 12px -4px rgba(0,0,0,0.49);
+  -moz-box-shadow: -1px 5px 12px -4px rgba(0,0,0,0.49);
+  box-shadow: -1px 5px 12px -4px rgba(0,0,0,0.49);
+}
+
+#pages .active a{
+  background: green!important;
+  color: white!important;
+}
+#pages a{
+  color: black!important;
+}
+#pages a:hover{
+  background: green!important;
+  color: white!important;
+}
+
+
+
+
+
+
+/* footer css styling */
+#footer{
+  color: white;
+  padding: 50px;
+  font-size: 15px;
+  background-color: #222222;
+}
+#footer a{
+  text-decoration: underline;
+}
+#footer_logo img{
+  width: 150px;
+  margin-bottom: 20px;
+  margin-left: -5px;
+}
+
+#footer{
+  font-size: 14px;
+}
+
+
+
+/* login page styling */
+#login_div{
+  width: 50%;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  -webkit-box-shadow: 7px 10px 29px -7px rgba(0,0,0,0.75);
+  -moz-box-shadow: 7px 10px 29px -7px rgba(0,0,0,0.75);
+  box-shadow: 7px 10px 29px -7px rgba(0,0,0,0.75);
+}
+
+#error-msg-pass-change{
+  color: red;
+}
+.section-main{
+  background-image:linear-gradient(to top, rgba(255, 255, 255, 0.5), rgb(255, 255, 255)), url('../images/maps.jpg');
+  height: 550px;
+}
+

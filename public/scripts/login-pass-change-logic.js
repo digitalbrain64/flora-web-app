@@ -8,10 +8,10 @@ $(document).ready(function(){
     $('#login_submit').attr('disabled', true)
     $('#verify_code_button').attr('disabled', true)
 
-$("#pwd,#user").on('input',()=>{
+$("#pwd,#email").on('input',()=>{
     if($('#error-msg-pass-change').css("display") == "block"){
         $('#error-msg-pass-change').fadeOut(200);
-        $("#user,#pwd").val('');
+        $("#email,#pwd").val('');
     }
     if($("#email").val()!="" && $("#pwd").val()!=""){
         $('#login_submit').attr('disabled', false)
@@ -22,11 +22,10 @@ $("#pwd,#user").on('input',()=>{
 })
 
 $('#login_submit').on('click', function(){
-    $.ajax({url: `https://dbrainz-flora-server-app.herokuapp.com/getUserData?u=${$('#user').val()}&p=${$('#pwd').val()}`,
+    $.ajax({url: `https://dbrainz-flora-server-app.herokuapp.com/getAppUserAccount?u=${$('#email').val()}&p=${$('#pwd').val()}`,
     dataType: "json",
     method: 'GET',
     success: function(result){
-      // create the weather card according to user location
       if(result[0].status == "error"){
         $('#error-msg-pass-change').fadeIn(300);
         $('#error-msg-pass-change > p').text("incorrect email/username or password");
@@ -34,7 +33,8 @@ $('#login_submit').on('click', function(){
         // set local storage data 
       }
       else{
-        window.location.replace('dashboard');
+          localStorage.setItem('user_id', result[0].user_id);
+          window.location.replace('dashboard');
       }
     },
     beforeSend: function(){
@@ -103,7 +103,7 @@ $('#verify_code_button').on('click',function(){
       method: 'GET',
       success: function(result){
         // create the weather card according to user location
-        if(result.status == "OK"){
+        if(result[0].status == "OK"){
             window.location.replace('pass-change-step-3');
         }
         else{

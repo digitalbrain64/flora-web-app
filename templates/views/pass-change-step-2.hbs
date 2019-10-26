@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/homepage.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -14,16 +14,30 @@
     <title>Document</title>
 </head>
 <body>
-    {{>header}}
-    <div id="login_div" class="container">
-        <div class="container-fluid">
+   <header>
+        <nav id="header" class="big-header-nav navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/"><img src="images/global_sos_tracker_w1000.png" alt=""></a>
+                </div>
+                <ul id="pages" class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><a href="login">Log In</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="section-main">
+
+    
+    <div style="margin-top: 100px;" id="login_div" class="container">
+        <div>
             <h2>Step 2:</h2>
         </div>
         <div class="cotainer">
             <form action="admin/check_login">
                 <div class="form-group">
                     <label>Enter verification code:</label>
-
                     <table id="digit_table">
                         <tr>
                             <td>
@@ -58,10 +72,11 @@
                         </div>
                     </div>
                 </div>
-            
-        </div>
+            </div>
+    </div>
     </div>
     {{>footer}}
     <script src="/scripts/login-pass-change-logic.js"></script>
+    
 </body>
 </html>
