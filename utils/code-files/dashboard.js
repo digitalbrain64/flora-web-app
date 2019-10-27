@@ -128,7 +128,7 @@ let createAppUserSection = ()=>{
 
   // get user data from API
   $.ajax({
-    url: `http://dbrainz-flora-server-app.herokuapp.com/getAppUserAccount?user_id=${user_id}`,
+    url: `https://dbrainz-flora-server-app.herokuapp.com/getAppUserAccount?user_id=${user_id}`,
     method: 'GET',
     dataType: 'json',
     success: function (response) {
