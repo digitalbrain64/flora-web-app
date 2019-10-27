@@ -870,7 +870,7 @@ let stat_fetchDeviceStats = (tab_id)=>{
 
   setInterval(function(){
     $.ajax({
-      url: `http://dbrainz-flora-server-app.herokuapp.com/getDeviceStatistic?device_sn=${tab_id}`,
+      url: `https://dbrainz-flora-server-app.herokuapp.com/getDeviceStatistic?device_sn=${tab_id}`,
       method: 'GET',
       dataType: 'json',
       success: function (response) {
@@ -1021,7 +1021,7 @@ let stat_createMaxMinPulseBlock = (pulseObj, tr, userName)=>{
 let fetchDeviceUserData= (tab_id)=>{
    // tab content: first name, last name, contancts and other information
    $.ajax({
-    url: `https://dbrainz-flora-server-app.herokuapp.com/getDeviceUserFull?device_id=${tab_id}`,
+    url: `http://dbrainz-flora-server-app.herokuapp.com/getDeviceUserFull?device_id=${tab_id}`,
     method: 'GET',
     dataType: 'json',
     success: function (response) {
@@ -1155,9 +1155,7 @@ let showHideTabsNavArrows = ()=>{
   tabs_width = 0;
 }
 
-let fetchUpdates = ()=>{
-  console.log($("#sidebar ul").children());
-  
+let fetchUpdates = ()=>{  
   // loop update all devices
   $("#sidebar ul").children().each(function(){
 
