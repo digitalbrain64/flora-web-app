@@ -914,7 +914,7 @@ let stat_setDeviceUserInfo = (tab_id, devUserBasicObj)=>{
   // running setInterval for infinite updates every 10 seconds
   setInterval( function(){
     $.ajax({
-      url :  `http://dbrainz-flora-server-app.herokuapp.com/getHighestLowestPulse?device_sn=${tab_id}`,
+      url :  `https://dbrainz-flora-server-app.herokuapp.com/getHighestLowestPulse?device_sn=${tab_id}`,
       method: 'GET',
         dataType: 'json',
         success: function (response) {
