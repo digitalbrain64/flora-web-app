@@ -174,7 +174,7 @@ let createDevices = ()=>{
   var app_user = localStorage.getItem('app-user');
   // ajax get all devices that are registered to the app user
   $.ajax({
-    url: `http://dbrainz-flora-server-app.herokuapp.com/getAppUserDevices?user_id=${app_user}`,
+    url: `https://dbrainz-flora-server-app.herokuapp.com/getAppUserDevices?user_id=${app_user}`,
     method: 'GET',
     dataType: 'json',
     success: function (response) {
@@ -203,7 +203,7 @@ let createDevices = ()=>{
 
   setInterval(function(){
     $.ajax({
-      url: `http://dbrainz-flora-server-app.herokuapp.com/getAppUserDevices?user_id=${app_user}`,
+      url: `https://dbrainz-flora-server-app.herokuapp.com/getAppUserDevices?user_id=${app_user}`,
       method: 'GET',
       dataType: 'json',
       success: function (response) {
@@ -854,7 +854,7 @@ let createTabAndTabContent = (tab_data_obj)=>{
 
 let stat_fetchDeviceStats = (tab_id)=>{
   $.ajax({
-    url :  `http://dbrainz-flora-server-app.herokuapp.com/getHighestLowestPulse?device_sn=${tab_id}`,
+    url :  `https://dbrainz-flora-server-app.herokuapp.com/getHighestLowestPulse?device_sn=${tab_id}`,
     method: 'GET',
       dataType: 'json',
       success: function (response) {
@@ -1021,7 +1021,7 @@ let stat_createMaxMinPulseBlock = (pulseObj, tr, userName)=>{
 let fetchDeviceUserData= (tab_id)=>{
    // tab content: first name, last name, contancts and other information
    $.ajax({
-    url: `http://dbrainz-flora-server-app.herokuapp.com/getDeviceUserFull?device_id=${tab_id}`,
+    url: `https://dbrainz-flora-server-app.herokuapp.com/getDeviceUserFull?device_id=${tab_id}`,
     method: 'GET',
     dataType: 'json',
     success: function (response) {
@@ -1170,7 +1170,7 @@ let fetchUpdates = ()=>{
 
     // fetch the newewst data about the device: device_id
     $.ajax({
-      url: `http://dbrainz-flora-server-app.herokuapp.com/getDeviceUpdates?device_sn=${device_id}`,
+      url: `https://dbrainz-flora-server-app.herokuapp.com/getDeviceUpdates?device_sn=${device_id}`,
       method: 'GET',
       dataType: 'json',
       success: function (response) {
